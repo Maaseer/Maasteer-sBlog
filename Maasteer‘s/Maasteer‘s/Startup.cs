@@ -24,13 +24,17 @@ namespace Maasteer_s
         public void ConfigureServices(IServiceCollection services)
         {
   
+
+            //注入依赖项
             services.AddDbContext<MyDbContext>(
                 options=>
                 {
+                    //将敏感的数据写入系统环境变量中，避免在Git上暴露信息
                     options.UseMySQL(Configuration["TestDatabaseConnectionStr"]);
                 });
+            //工作单元
             services.AddScoped<IUnitForWork, UnitForWork>();
-            
+            //方法
             services.AddScoped<IRepository, ArticleRepository>();
             services.AddMvc();
         }
