@@ -15,9 +15,10 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Maasteer_s": {
+    "Blog.Api": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "api/index",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

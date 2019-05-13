@@ -1,7 +1,7 @@
-﻿using Blog.infrastructure.Interface;
+﻿using Blog.infrastructure.Entity;
 using System.Threading.Tasks;
 
-namespace Blog.Core.Database
+namespace Blog.Core.UnitOfWork
 {
     public class UnitForWork : IUnitForWork
     {

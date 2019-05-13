@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.API", "Maasteer‘s\Blog.API.csproj", "{A3DD9F05-3603-4E4E-894B-11A1E97784C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.API", "Maasteer‘s\Blog.API.csproj", "{A3DD9F05-3603-4E4E-894B-11A1E97784C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.infrastructure", "Blog.infrastructure\Blog.infrastructure.csproj", "{5BD77D4A-681E-443A-902E-EA5332EFBE8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.infrastructure", "Blog.infrastructure\Blog.infrastructure.csproj", "{5BD77D4A-681E-443A-902E-EA5332EFBE8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Core", "Blog.Core\Blog.Core.csproj", "{949C43C6-D974-430D-AE11-021C73EE3438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Core", "Blog.Core\Blog.Core.csproj", "{949C43C6-D974-430D-AE11-021C73EE3438}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B334DB9-2D2C-478F-8EBE-259A698A1295}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

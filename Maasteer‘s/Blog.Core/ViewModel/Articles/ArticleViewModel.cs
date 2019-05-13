@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Blog.infrastructure.Model
+namespace Blog.Core.ViewModel.Articles
 {
-    public class Article
+    public class ArticleViewModel
     {
-        
         public int Id { get; set; }
         public string Auther { get; set; }
         public string Title { get; set; }
