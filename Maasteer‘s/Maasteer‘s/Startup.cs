@@ -17,6 +17,7 @@ using Blog.Core.ViewModel.Validation;
 using Blog.infrastructure.Entity;
 using Blog.Core.Repository;
 using Blog.infrastructure.Service.TypeHelp;
+using FluentValidation.AspNetCore;
 
 namespace BlogApi
 {
@@ -51,15 +52,16 @@ namespace BlogApi
                 options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
                 })
                 //设置返回Json时名字首字母小写
-                .AddJsonOptions(option=> { option.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); });
+                .AddJsonOptions(option=> { option.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); })
+                .AddFluentValidation();
 
             //添加Model-ViewModel的导航
             services.AddAutoMapper();
             //添加Mode-ViewModel的验证
-            services.AddTransient<IValidator<ArticleViewModel>, ArticleViewModelValidation>();
+            services.AddTransient<IValidator<ArticleAddOrUpdateViewModel>, ArticleAddViewModelValidation>();
             //添加属性字典映射服务（排序用）
             var propertyMappingContainer = new PropertyMappingContainer();
-            propertyMappingContainer.Register<ArticlePropertyMapping>();
+            propertyMappingContainer.Register<SortArticlePropertyMapping>();
             services.AddSingleton<IPropertyMappingContainer>(propertyMappingContainer);
             services.AddTransient<ITypehelper, TypeHelper>();
         }

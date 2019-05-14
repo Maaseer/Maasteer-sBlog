@@ -10,7 +10,7 @@ namespace Blog.infrastructure.Service.ResourceShaping
 {
     public static class  ResourceShapingSingleExtensions
     {
-       public static ExpandoObject ToDynamic<TSource>(this TSource source,string fields)
+       public static ExpandoObject ToDynamic<TSource>(this TSource source,string fields = null)
         {
             if (source == null)
                 throw new ArithmeticException(nameof(TSource));

@@ -25,10 +25,9 @@ namespace Blog.Core.Repository
         public IPropertyMappingContainer PropertyMappingContainer { get; }
 
         //根据Id删除博客
-        public async void DeleteArticle(int Id)
+        public void DeleteArticle(Article article)
         {
-            var result = await FindArticleByIdAsync(Id);
-            MyDbContext.Articles.Remove(result);
+            MyDbContext.Articles.Remove(article);
         }
 
         //根据Id查找

@@ -11,7 +11,7 @@ namespace Blog.Core.Repository
         void PostArticle(Article article);
         Task<PaginatedList<Article>> GetAllArticleAsync(ArticlePrameters articlePrameters);
         void PutArticle(Article article);
-        void DeleteArticle(int Id);
+        void DeleteArticle(Article article);
         Task<Article> FindArticleByIdAsync(int Id);
     }
 }

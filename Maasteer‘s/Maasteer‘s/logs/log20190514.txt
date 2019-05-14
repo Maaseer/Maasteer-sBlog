@@ -1,0 +1,648 @@
+2019-05-14 13:47:35.828 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 13:47:45.361 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 13:47:45.745 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 13:47:47.095 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 13:47:48.444 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:47:50.174 +08:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 13:47:51.309 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 13:47:51.526 +08:00 [INF] Executed DbCommand (64ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 13:47:51.905 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4736.5182ms.
+2019-05-14 13:47:51.933 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 13:47:52.016 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 6169.5317000000005ms
+2019-05-14 13:47:52.036 +08:00 [INF] Request finished in 6675.9708ms 200 application/json; charset=utf-8
+2019-05-14 13:49:39.227 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 13:49:44.643 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 13:49:45.241 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 13:49:46.835 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 13:49:48.509 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:49:50.699 +08:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 13:49:50.850 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 13:49:51.192 +08:00 [INF] Executed DbCommand (82ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 13:49:51.661 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4674.8531ms.
+2019-05-14 13:49:51.699 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 13:49:51.787 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 6528.4343ms
+2019-05-14 13:49:51.839 +08:00 [INF] Request finished in 7201.0599ms 200 application/json; charset=utf-8
+2019-05-14 13:53:47.712 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 13:53:51.943 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 13:53:52.435 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 13:53:53.888 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 13:53:55.498 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:53:57.697 +08:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 13:53:57.858 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 13:53:58.222 +08:00 [INF] Executed DbCommand (64ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 13:53:58.688 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4740.2853000000005ms.
+2019-05-14 13:54:01.109 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 13:54:01.209 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 8757.0649000000012ms
+2019-05-14 13:54:01.247 +08:00 [INF] Request finished in 9307.3846ms 200 application/json; charset=utf-8
+2019-05-14 13:55:16.081 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 53
+2019-05-14 13:55:24.041 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 13:55:24.342 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Invalid"
+2019-05-14 13:55:24.393 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:55:24.781 +08:00 [INF] Executed DbCommand (68ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 13:55:25.717 +08:00 [INF] Executed DbCommand (164ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = -1), @p1='?' (DbType = DateTime), @p2='?' (Size = -1)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Articles` SET `Context` = @p0, `Date` = @p1, `Title` = @p2
+WHERE `Id` = @p3;
+SELECT ROW_COUNT();
+2019-05-14 13:55:25.869 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 1511.7983000000002ms.
+2019-05-14 13:55:25.889 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-05-14 13:55:25.895 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 1846.4063ms
+2019-05-14 13:55:25.918 +08:00 [INF] Request finished in 9836.89ms 200 
+2019-05-14 13:57:01.046 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 13:57:10.664 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/index application/json 18
+2019-05-14 13:57:11.131 +08:00 [INF] Route matched with {action = "Post", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Post (Blog.API)
+2019-05-14 13:57:13.068 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Post (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Invalid"
+2019-05-14 13:57:13.143 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Post (Blog.API), returned result Blog.Core.ViewModel.Validation.ValidationErrorResult in 17.6761ms.
+2019-05-14 13:57:13.168 +08:00 [INF] Executing ObjectResult, writing value of type 'Blog.Core.ViewModel.Validation.VaildationErrorDictionary'.
+2019-05-14 13:57:13.387 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Post (Blog.API) in 2202.2495ms
+2019-05-14 13:57:13.444 +08:00 [INF] Request finished in 2787.8525ms 422 application/json; charset=utf-8
+2019-05-14 13:57:25.423 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 13:57:25.485 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 13:57:25.564 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 13:57:27.432 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:57:29.534 +08:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 13:57:29.685 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 13:57:30.016 +08:00 [INF] Executed DbCommand (76ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 13:57:30.406 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4818.3164000000006ms.
+2019-05-14 13:57:30.566 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 13:57:30.686 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 5158.6913ms
+2019-05-14 13:57:30.701 +08:00 [INF] Request finished in 5277.4142ms 200 application/json; charset=utf-8
+2019-05-14 13:57:38.045 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 53
+2019-05-14 13:57:38.246 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 13:57:38.273 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Invalid"
+2019-05-14 13:57:38.300 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Blog.Core.ViewModel.Validation.ValidationErrorResult in 16.0009ms.
+2019-05-14 13:57:38.319 +08:00 [INF] Executing ObjectResult, writing value of type 'Blog.Core.ViewModel.Validation.VaildationErrorDictionary'.
+2019-05-14 13:57:38.343 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 82.2908ms
+2019-05-14 13:57:38.353 +08:00 [INF] Request finished in 307.2471ms 422 application/json; charset=utf-8
+2019-05-14 13:57:52.840 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 102
+2019-05-14 13:57:52.846 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 13:57:52.972 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Valid"
+2019-05-14 13:57:53.009 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 13:57:53.392 +08:00 [INF] Executed DbCommand (46ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 13:57:54.032 +08:00 [INF] Executed DbCommand (71ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = -1), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Articles` SET `Context` = @p0, `Date` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2019-05-14 13:57:54.163 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 1178.3331ms.
+2019-05-14 13:57:54.182 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-05-14 13:57:54.188 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 1217.4918ms
+2019-05-14 13:57:54.199 +08:00 [INF] Request finished in 1358.8708ms 200 
+2019-05-14 14:01:08.015 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 14:01:21.431 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 102
+2019-05-14 14:01:21.936 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 14:01:23.804 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Valid"
+2019-05-14 14:01:25.434 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:01:27.030 +08:00 [INF] Executed DbCommand (74ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:01:27.953 +08:00 [INF] Executed DbCommand (80ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Articles` SET `LastModeify` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2019-05-14 14:01:28.083 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 4210.8262ms.
+2019-05-14 14:01:28.118 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2019-05-14 14:01:28.136 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 6180.598ms
+2019-05-14 14:01:28.184 +08:00 [INF] Request finished in 6761.0669ms 204 
+2019-05-14 14:01:35.776 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 14:01:35.837 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:01:35.888 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 14:01:36.013 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:01:36.391 +08:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 14:01:36.487 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 14:01:36.730 +08:00 [INF] Executed DbCommand (51ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 14:01:36.894 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 990.94530000000009ms.
+2019-05-14 14:01:36.922 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 14:01:37.011 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 1152.4534ms
+2019-05-14 14:01:37.025 +08:00 [INF] Request finished in 1249.7751ms 200 application/json; charset=utf-8
+2019-05-14 14:02:00.825 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 110
+2019-05-14 14:02:00.852 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 14:02:00.935 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Valid"
+2019-05-14 14:02:00.985 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:02:01.170 +08:00 [INF] Executed DbCommand (47ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:02:01.490 +08:00 [INF] Executed DbCommand (83ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (Size = -1)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Articles` SET `LastModeify` = @p0, `Title` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2019-05-14 14:02:01.591 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 607.22070000000008ms.
+2019-05-14 14:02:01.605 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2019-05-14 14:02:01.610 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 697.52370000000008ms
+2019-05-14 14:02:01.620 +08:00 [INF] Request finished in 796.2228ms 204 
+2019-05-14 14:02:07.926 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 14:02:07.942 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:02:07.971 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 14:02:07.997 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:02:08.163 +08:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 14:02:08.370 +08:00 [INF] Executed DbCommand (61ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 14:02:08.396 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 399.5394ms.
+2019-05-14 14:02:08.424 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 14:02:08.448 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 479.97200000000004ms
+2019-05-14 14:02:08.457 +08:00 [INF] Request finished in 530.6518ms 200 application/json; charset=utf-8
+2019-05-14 14:04:45.958 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 14:05:00.269 +08:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5000/api/Index/11 application/json 110
+2019-05-14 14:05:00.784 +08:00 [INF] Route matched with {action = "Put", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Put (Blog.API)
+2019-05-14 14:05:02.994 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Put (Blog.API) with arguments (["11","Blog.Core.ViewModel.Articles.ArticleAddOrUpdateViewModel"]) - Validation state: "Valid"
+2019-05-14 14:05:17.360 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:05:19.994 +08:00 [INF] Executed DbCommand (98ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:05:57.050 +08:00 [INF] Executed DbCommand (80ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `Articles` SET `LastModeify` = @p0
+WHERE `Id` = @p1;
+SELECT ROW_COUNT();
+2019-05-14 14:05:58.411 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Put (Blog.API), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 43149.8392ms.
+2019-05-14 14:05:58.465 +08:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2019-05-14 14:05:58.495 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Put (Blog.API) in 57690.6174ms
+2019-05-14 14:05:58.578 +08:00 [INF] Request finished in 58313.5394ms 204 
+2019-05-14 14:06:07.905 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 14:06:08.037 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:06:08.077 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 14:06:08.218 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:06:08.536 +08:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 14:06:08.625 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 14:06:08.823 +08:00 [INF] Executed DbCommand (53ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModeify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 14:06:09.048 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 955.8673ms.
+2019-05-14 14:06:09.085 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 14:06:09.185 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 1131.904ms
+2019-05-14 14:06:09.195 +08:00 [INF] Request finished in 1290.9673ms 200 application/json; charset=utf-8
+2019-05-14 14:06:55.941 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index/11  
+2019-05-14 14:06:55.974 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:06:55.991 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["11",""]) - Validation state: "Valid"
+2019-05-14 14:06:56.032 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:06:56.310 +08:00 [INF] Executed DbCommand (66ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:06:56.346 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 313.4148ms.
+2019-05-14 14:06:56.355 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Dynamic.ExpandoObject'.
+2019-05-14 14:06:56.361 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 371.5104ms
+2019-05-14 14:06:56.366 +08:00 [INF] Request finished in 425.4944ms 200 application/json; charset=utf-8
+2019-05-14 14:07:08.571 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index/11  
+2019-05-14 14:07:08.578 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:07:08.594 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["11",""]) - Validation state: "Valid"
+2019-05-14 14:07:12.951 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:07:13.121 +08:00 [INF] Executed DbCommand (46ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModeify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:16:02.902 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 14:16:43.258 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index/11  
+2019-05-14 14:16:43.777 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:16:45.205 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["11",""]) - Validation state: "Valid"
+2019-05-14 14:16:53.511 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:16:55.771 +08:00 [INF] Executed DbCommand (80ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `x`.`Id`, `x`.`Auther`, `x`.`Context`, `x`.`Date`, `x`.`LastModify`, `x`.`Remark`, `x`.`Title`
+FROM `Articles` AS `x`
+WHERE `x`.`Id` = @__Id_0
+LIMIT 1
+2019-05-14 14:16:56.070 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10798.484ms.
+2019-05-14 14:16:56.107 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Dynamic.ExpandoObject'.
+2019-05-14 14:16:56.311 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 12503.637400000001ms
+2019-05-14 14:16:56.342 +08:00 [INF] Request finished in 13089.7707ms 200 application/json; charset=utf-8
+2019-05-14 14:18:34.880 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 14:19:01.408 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 14:19:01.777 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 14:19:03.068 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 14:19:04.616 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 14:19:06.744 +08:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 14:19:06.891 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 14:19:07.230 +08:00 [INF] Executed DbCommand (64ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 14:19:07.697 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4571.1584ms.
+2019-05-14 14:19:07.735 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 14:19:07.836 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 6040.8422ms
+2019-05-14 14:19:07.876 +08:00 [INF] Request finished in 6472.3379ms 200 application/json; charset=utf-8
+2019-05-14 15:41:02.811 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 15:42:04.596 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index?pageSize=3  
+2019-05-14 15:42:05.170 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 15:42:07.116 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 15:42:08.718 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 15:42:11.280 +08:00 [ERR] An error occurred using the connection to database 'BlogDatabase' on server '111.231.142.21'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+2019-05-14 15:42:11.528 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Blog.infrastructure.Entity.MyDbContext'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-05-14 15:42:11.759 +08:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Blog.infrastructure.Entity.MyDbContext'.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+2019-05-14 15:42:12.382 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 7195.4768ms
+2019-05-14 15:42:12.394 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Blog.Core.Repository.ArticleRepository.GetAllArticleAsync(ArticlePrameters articlePrameters) in C:\Users\76375\source\repos\Maasteer'sBolo\Maasteer‘s\Blog.Core\Repository\ArticleRepository.cs:line 62
+   at BlogApi.Controllers.IndexControllers.Get(ArticlePrameters articlePrameters) in C:\Users\76375\source\repos\Maasteer'sBolo\Maasteer‘s\Maasteer‘s\Controllers\indexControllers.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-05-14 15:42:12.702 +08:00 [ERR] Unable to connect to any of the specified MySQL hosts.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts. ---> System.AggregateException: One or more errors occurred. (向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306) ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException: 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+---> (Inner Exception #0) System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10051): 向一个无法连接的网络尝试了一个套接字操作。 111.231.142.21:3306
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.TcpClient.<>c.<ConnectAsync>b__28_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)<---
+
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.AsyncQueryMethodProvider.GetResult[TResult](IAsyncEnumerable`1 valueBuffers, Boolean throwOnNullResult, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Blog.Core.Repository.ArticleRepository.GetAllArticleAsync(ArticlePrameters articlePrameters) in C:\Users\76375\source\repos\Maasteer'sBolo\Maasteer‘s\Blog.Core\Repository\ArticleRepository.cs:line 62
+   at BlogApi.Controllers.IndexControllers.Get(ArticlePrameters articlePrameters) in C:\Users\76375\source\repos\Maasteer'sBolo\Maasteer‘s\Maasteer‘s\Controllers\indexControllers.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-05-14 15:42:12.973 +08:00 [INF] Request finished in 8385.5401ms 500 application/json
+2019-05-14 15:42:35.370 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index?pageSize=3  
+2019-05-14 15:42:35.374 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 15:42:35.384 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 15:42:35.389 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 15:42:35.934 +08:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 15:42:36.000 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 15:42:36.186 +08:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 15:42:36.434 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1041.9979ms.
+2019-05-14 15:42:36.451 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 15:42:36.494 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 1117.7659ms
+2019-05-14 15:42:36.504 +08:00 [INF] Request finished in 1133.588ms 200 application/json; charset=utf-8
+2019-05-14 15:42:58.595 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index?pageSize=3&pageIndex=2  
+2019-05-14 15:42:58.705 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 15:42:58.723 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 15:42:58.730 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 15:42:58.885 +08:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 15:42:58.988 +08:00 [INF] Executed DbCommand (31ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 15:42:59.008 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 278.8698ms.
+2019-05-14 15:42:59.015 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 15:42:59.022 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 299.3786ms
+2019-05-14 15:42:59.027 +08:00 [INF] Request finished in 431.6998ms 200 application/json; charset=utf-8
+2019-05-14 17:30:22.040 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 17:30:40.574 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/index  
+2019-05-14 17:30:40.737 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 17:30:41.238 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 17:30:41.853 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 17:30:42.578 +08:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 17:30:42.633 +08:00 [WRN] Query: '(from Article <generated>_2 in DbSet<Article> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-05-14 17:30:42.740 +08:00 [INF] Executed DbCommand (19ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 17:30:42.910 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1648.5158000000001ms.
+2019-05-14 17:30:42.922 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 17:30:42.955 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 2213.5643ms
+2019-05-14 17:30:42.968 +08:00 [INF] Request finished in 2395.5185ms 200 application/json; charset=utf-8
+2019-05-14 17:31:12.769 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Index?PageIndex=0&PageSize=&OrderBy=Id  
+2019-05-14 17:31:12.772 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 17:31:12.798 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Invalid"
+2019-05-14 17:31:12.809 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 17:31:13.073 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 17:31:13.145 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+ORDER BY `a`.`Id`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 17:31:13.151 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 349.0357ms.
+2019-05-14 17:31:13.154 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 17:31:13.161 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 384.6775ms
+2019-05-14 17:31:13.163 +08:00 [INF] Request finished in 394.173ms 200 application/json; charset=utf-8
+2019-05-14 17:31:22.069 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Index?PageIndex=0&PageSize=3&OrderBy=Id  
+2019-05-14 17:31:22.081 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 17:31:22.086 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 17:31:22.094 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 17:31:22.156 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 17:31:22.205 +08:00 [INF] Executed DbCommand (15ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+ORDER BY `a`.`Id`
+LIMIT @__p_1 OFFSET @__p_0
+2019-05-14 17:31:22.212 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 117.80930000000001ms.
+2019-05-14 17:31:22.216 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 17:31:22.219 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 134.75300000000001ms
+2019-05-14 17:31:22.222 +08:00 [INF] Request finished in 152.7666ms 200 application/json; charset=utf-8
+2019-05-14 17:31:33.963 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Index?PageIndex=1&PageSize=3&OrderBy=Id  
+2019-05-14 17:31:33.964 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 17:31:33.968 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 17:31:33.978 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 17:31:34.028 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 17:31:34.083 +08:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+ORDER BY `a`.`Id`
+LIMIT @__p_0 OFFSET @__p_0
+2019-05-14 17:31:34.089 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 111.71900000000001ms.
+2019-05-14 17:31:34.092 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 17:31:34.095 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 127.7089ms
+2019-05-14 17:31:34.097 +08:00 [INF] Request finished in 134.2086ms 200 application/json; charset=utf-8
+2019-05-14 17:33:19.519 +08:00 [INF] User profile is available. Using 'C:\Users\76375\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-14 17:33:23.927 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Index?PageIndex=1&PageSize=3&OrderBy=Id  
+2019-05-14 17:33:33.194 +08:00 [INF] Route matched with {action = "Get", controller = "IndexControllers"}. Executing action BlogApi.Controllers.IndexControllers.Get (Blog.API)
+2019-05-14 17:33:33.706 +08:00 [INF] Executing action method BlogApi.Controllers.IndexControllers.Get (Blog.API) with arguments (["Blog.Core.ViewModel.Articles.ArticlePrameters"]) - Validation state: "Valid"
+2019-05-14 17:33:34.322 +08:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'MyDbContext' using provider 'MySql.Data.EntityFrameworkCore' with options: None
+2019-05-14 17:33:35.308 +08:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `Articles` AS `a`
+2019-05-14 17:33:35.493 +08:00 [INF] Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `a`.`Id`, `a`.`Auther`, `a`.`Context`, `a`.`Date`, `a`.`LastModify`, `a`.`Remark`, `a`.`Title`
+FROM `Articles` AS `a`
+ORDER BY `a`.`Id`
+LIMIT @__p_0 OFFSET @__p_0
+2019-05-14 17:33:35.679 +08:00 [INF] Executed action method BlogApi.Controllers.IndexControllers.Get (Blog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1951.7843ms.
+2019-05-14 17:33:35.691 +08:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Collections.Generic.IEnumerable`1[[Blog.Core.ViewModel.Link.LinkViewModel, Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IEnumerable`1[[System.Dynamic.ExpandoObject, System.Linq.Expressions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-05-14 17:33:35.727 +08:00 [INF] Executed action BlogApi.Controllers.IndexControllers.Get (Blog.API) in 2526.8266000000003ms
+2019-05-14 17:33:35.744 +08:00 [INF] Request finished in 11818.6126ms 200 application/json; charset=utf-8

@@ -12,6 +12,8 @@ namespace Blog.Core.ViewModel.EntityToViewModelPropertyMapping
             //创建双向属性映射
             CreateMap<Article, ArticleViewModel>();
             CreateMap<ArticleViewModel, Article>();
+            CreateMap<Article, ArticleAddOrUpdateViewModel>();
+            CreateMap<ArticleAddOrUpdateViewModel, Article>();
         }
     }
 }

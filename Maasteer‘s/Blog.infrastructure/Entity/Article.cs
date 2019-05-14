@@ -9,6 +9,7 @@ namespace Blog.infrastructure.Model
         public string Title { get; set; }
         public string Context { get; set; }
         public DateTime Date { get; set; }
-
+        public string Remark { get; set; }
+        public DateTime LastModify { get; set; }
     }
 }

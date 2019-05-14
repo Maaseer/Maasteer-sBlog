@@ -4,11 +4,12 @@ using Blog.Core.ViewModel.Articles;
 using Blog.infrastructure.Model;
 using Blog.Service.infrastructure.Service;
 
+//排序用属性映射
 namespace Blog.Core.ViewModel.EntityToViewModelPropertyMapping
 {
-    public class ArticlePropertyMapping : PropertyMapping<ArticleViewModel, Article>
+    public class SortArticlePropertyMapping : PropertyMapping<ArticleViewModel, Article>
     {
-        public ArticlePropertyMapping() : base(new Dictionary<string, List<MappedProperty>>
+        public SortArticlePropertyMapping() : base(new Dictionary<string, List<MappedProperty>>
         (StringComparer.OrdinalIgnoreCase)
         {
             [nameof(ArticleViewModel.Title)] = new List<MappedProperty>

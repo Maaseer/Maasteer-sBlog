@@ -4,10 +4,12 @@ using Blog.Core.Repository;
 using Blog.Core.UnitOfWork;
 using Blog.Core.ViewModel.Articles;
 using Blog.Core.ViewModel.Link;
+using Blog.Core.ViewModel.Validation;
 using Blog.infrastructure.Model;
 using Blog.infrastructure.Service.ResourceShaping;
 using Blog.infrastructure.Service.TypeHelp;
 using Blog.Service.infrastructure.Service;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -108,46 +110,100 @@ namespace BlogApi.Controllers
             return Ok(result);
             
         }
+
+
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Article article)
+        public async Task<IActionResult> Post([FromBody]ArticleAddOrUpdateViewModel articleAddResource)
         {
-            try
-            {
-                article.Date = DateTime.Now;
-                Repository.PostArticle(article);
-                await UnitForWork.SaveAsync();
-                return Ok();
-
-            }
-            catch
-            {
-                return BadRequest("添加失败");
-            }
-        }
-
-
-        [HttpPut]
-        public async Task<IActionResult> Put([FromBody]Article article)
-        {
-            try
-            {
-                Repository.PutArticle(article);
-                await UnitForWork.SaveAsync();
-                return Ok();
-            }
-            catch
-            {
+            if (articleAddResource == null)
                 return BadRequest();
+            //使用FluentValidation验证属性
+            if(!ModelState.IsValid)
+            {
+                
+                return new ValidationErrorResult(ModelState);
             }
+
+            var article = Mapper.Map<ArticleAddOrUpdateViewModel,Article>(articleAddResource);
+            article.Auther = "admin";
+            article.Date = DateTime.Now;
+
+
+            Repository.PostArticle(article);
+            if (!await UnitForWork.SaveAsync())
+                throw new Exception("保存失败！");
+
+            var resultViewModel = Mapper.Map<Article, ArticleViewModel>(article).ToDynamic();
+            var resultViewModelId = resultViewModel.Where(s => s.Key == "Id").FirstOrDefault().Value;
+            resultViewModel.TryAdd("links", CreateHateoasLinks((int)resultViewModelId));
+
+            return CreatedAtRoute("GetSingleArticle", new { id = resultViewModelId},resultViewModel);
+        }
+  
+
+
+        [HttpPut("{id}",Name ="UpdateArticle")]
+        public async Task<IActionResult> Put(int id,[FromBody]ArticleAddOrUpdateViewModel article)
+        {
+     
+            if (article == null)
+                return BadRequest();
+            //使用FluentValidation验证属性
+            if (!ModelState.IsValid)
+                return new ValidationErrorResult(ModelState);
+
+            var result = await Repository.FindArticleByIdAsync(id);
+            if (result == null)
+                return BadRequest("找不到该文章");
+
+            Mapper.Map(article,result);
+            result.LastModify = DateTime.Now;
+
+            if (!await UnitForWork.SaveAsync())
+                return BadRequest("Save Error!");
+
+            return NoContent();
+    
+        }
+        [HttpPatch("id",Name="PatchArticle")]
+        public async Task<IActionResult> Patch(int id,[FromBody]JsonPatchDocument<ArticleAddOrUpdateViewModel> jsonPatch)
+        {
+            //验证传入的属性是否存在
+            if (jsonPatch == null)
+                return BadRequest();
+            var article = await Repository.FindArticleByIdAsync(id);
+            if (article == null)
+                return NotFound();
+
+            //将jsonPatchDocument解析到一个ArticleAddOrUpdateViewModel，并验证其正确性
+            var articleToPatch = Mapper.Map<ArticleAddOrUpdateViewModel>(article);
+            jsonPatch.ApplyTo(articleToPatch, ModelState);
+            TryValidateModel(articleToPatch);
+            if(!ModelState.IsValid)
+                return new ValidationErrorResult(ModelState);
+
+            //将修改后的Article映射回原对象，并修改修改时间
+            Mapper.Map(article, articleToPatch);
+            article.LastModify = DateTime.Now;
+
+            
+            if(!await UnitForWork.SaveAsync())
+                return BadRequest();
+
+            return NoContent();
         }
         [HttpDelete("{Id}",Name ="DeleteArticle")]
         public async Task<IActionResult> Delete(int Id)
         {
             try
             {
-                Repository.DeleteArticle(Id);
+                var article = await Repository.FindArticleByIdAsync(Id);
+                if (article == null)
+                    return NotFound();
+
+                Repository.DeleteArticle(article);
                 await UnitForWork.SaveAsync();
-                return Ok();
+                return NoContent();
             }
             catch
             {
@@ -160,7 +216,7 @@ namespace BlogApi.Controllers
         {
             switch (paginationUrlType)
             {
-                case PaginationUrlType.CurrentPage:
+                case PaginationUrlType.PreviousPage:
                     var CurrentPrameter = new ArticlePrameters
                     {
                         PageIndex = articlePrameters.PageIndex - 1,
@@ -197,7 +253,9 @@ namespace BlogApi.Controllers
         {
             var links = new List<LinkViewModel>();
             //添加deleteLink
-            links.Add(new LinkViewModel(Url.Link("DeleteArticle", new { id }), "delete_self", "delete"));
+            links.Add(new LinkViewModel(Url.Link("DeleteArticle", new { id }), "delete_self", "Delete"));
+            links.Add(new LinkViewModel(Url.Link("UpdateArticle", new { id }), "update_self", "Put"));
+
             //判断是否有资源塑形，添加不同的getLink
             if (fields == null)
                 links.Add(new LinkViewModel(Url.Link("GetSingleArticle", new { id }), "self", "Get"));
@@ -206,7 +264,7 @@ namespace BlogApi.Controllers
 
             return links;
         }
-        //创建数组的links
+        //创建页面的links
         public IEnumerable<LinkViewModel> CreateHateoasLinksForPages(ArticlePrameters articlePrameters,bool hasNextPage,bool hasLastPage)
         {
             var links = new List<LinkViewModel>();
