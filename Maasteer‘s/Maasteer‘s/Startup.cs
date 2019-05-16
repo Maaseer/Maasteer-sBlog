@@ -18,6 +18,13 @@ using Blog.infrastructure.Entity;
 using Blog.Core.Repository;
 using Blog.infrastructure.Service.TypeHelp;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Http;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace BlogApi
 {
@@ -33,9 +40,19 @@ namespace BlogApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-  
 
-            //注入依赖项
+    
+            //添加配置MVC
+            services.AddMvc(options => {
+                options.ReturnHttpNotAcceptable = true;
+                options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+            })
+                //设置返回Json时名字首字母小写
+                .AddJsonOptions(option => { option.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); })
+                .AddFluentValidation();
+
+
+            //添加配置EF数据库
             services.AddDbContext<MyDbContext>(
                 options=>
                 {
@@ -43,19 +60,37 @@ namespace BlogApi
                     //连接字符串后要加  Character Set=utf8  ，不然中文会乱码
                     options.UseMySQL(Configuration["TestDatabaseConnectionStr"]);
                 });
+
+            //身份认证和HTTPS重定向
+            //services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+            //    .AddIdentityServerAuthentication(options =>
+            //    {
+            //        options.Authority = "https://localhost:5001";
+            //        options.ApiName = "restapi";
+            //    });
+
+            //services.AddHttpsRedirection(options =>
+            //{
+            //    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+            //    options.HttpsPort = 5001;
+            //});
+
+
+            ////使用IdentitySever 保护API
+            //services.Configure<MvcOptions>(options =>
+            //{
+            //    var policy = new AuthorizationPolicyBuilder()
+            //    .RequireAuthenticatedUser().Build();
+            //    options.Filters.Add(new AuthorizeFilter(policy));
+            //});
+
             //工作单元
             services.AddScoped<IUnitForWork, UnitForWork>();
             //注册DAO组件
             services.AddScoped<IArticleRepository, ArticleRepository>();
-            services.AddMvc(options=> {
-                options.ReturnHttpNotAcceptable = true;
-                options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-                })
-                //设置返回Json时名字首字母小写
-                .AddJsonOptions(option=> { option.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); })
-                .AddFluentValidation();
+            
 
-            //添加Model-ViewModel的导航
+            //添加AutoMapper
             services.AddAutoMapper();
             //添加Mode-ViewModel的验证
             services.AddTransient<IValidator<ArticleAddOrUpdateViewModel>, ArticleAddViewModelValidation>();
@@ -64,6 +99,8 @@ namespace BlogApi
             propertyMappingContainer.Register<SortArticlePropertyMapping>();
             services.AddSingleton<IPropertyMappingContainer>(propertyMappingContainer);
             services.AddTransient<ITypehelper, TypeHelper>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -87,7 +124,9 @@ namespace BlogApi
             //异常处理一定要在MVC前面！
             app.UseMyGlobalExceptionHandler(loggerFactory);
 
-
+            //测试用时停用HTTPS和身份验证
+            //app.UseHttpsRedirection();
+            //app.UseAuthentication();
             app.UseMvc();
 
 

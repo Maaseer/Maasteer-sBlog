@@ -9,6 +9,7 @@ using Blog.infrastructure.Model;
 using Blog.infrastructure.Service.ResourceShaping;
 using Blog.infrastructure.Service.TypeHelp;
 using Blog.Service.infrastructure.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -21,6 +22,8 @@ using System.Threading.Tasks;
 
 namespace BlogApi.Controllers
 {
+    //标记该控制器需要授权
+    //[Authorize]
     [Route("api/Index")]
     public class IndexControllers:Controller
     {
@@ -165,7 +168,7 @@ namespace BlogApi.Controllers
             return NoContent();
     
         }
-        [HttpPatch("id",Name="PatchArticle")]
+        [HttpPatch("{id}",Name="PatchArticle")]
         public async Task<IActionResult> Patch(int id,[FromBody]JsonPatchDocument<ArticleAddOrUpdateViewModel> jsonPatch)
         {
             //验证传入的属性是否存在
@@ -183,7 +186,7 @@ namespace BlogApi.Controllers
                 return new ValidationErrorResult(ModelState);
 
             //将修改后的Article映射回原对象，并修改修改时间
-            Mapper.Map(article, articleToPatch);
+            Mapper.Map(articleToPatch, article);
             article.LastModify = DateTime.Now;
 
             
