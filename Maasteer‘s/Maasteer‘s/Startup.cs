@@ -41,7 +41,17 @@ namespace BlogApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-    
+            services.AddCors(option =>
+            {
+                option.AddPolicy("any", builder =>
+                {
+                    //允许localhost中8080端口跨域访问所有api
+                    builder.WithOrigins("http://localhost:8080")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                    
+                });
+            });
             //添加配置MVC
             services.AddMvc(options => {
                 options.ReturnHttpNotAcceptable = true;
@@ -124,6 +134,8 @@ namespace BlogApi
             //异常处理一定要在MVC前面！
             app.UseMyGlobalExceptionHandler(loggerFactory);
 
+            //添加允许跨域访问配置
+            app.UseCors("any");
             //测试用时停用HTTPS和身份验证
             //app.UseHttpsRedirection();
             //app.UseAuthentication();

@@ -16,8 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogIdp", "..\..\..\..\Desktop\BlogIdp\BlogIdp.csproj", "{3FAE26C9-8C22-4563-A1EF-04067C4760A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClint", "MvcClint\MvcClint.csproj", "{170C1554-FE81-43DA-8965-FD72A397F10D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,10 +38,6 @@ Global
 		{3FAE26C9-8C22-4563-A1EF-04067C4760A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FAE26C9-8C22-4563-A1EF-04067C4760A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FAE26C9-8C22-4563-A1EF-04067C4760A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{170C1554-FE81-43DA-8965-FD72A397F10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{170C1554-FE81-43DA-8965-FD72A397F10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{170C1554-FE81-43DA-8965-FD72A397F10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{170C1554-FE81-43DA-8965-FD72A397F10D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

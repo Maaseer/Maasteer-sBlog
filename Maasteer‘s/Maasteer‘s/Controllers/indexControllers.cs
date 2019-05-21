@@ -9,7 +9,6 @@ using Blog.infrastructure.Model;
 using Blog.infrastructure.Service.ResourceShaping;
 using Blog.infrastructure.Service.TypeHelp;
 using Blog.Service.infrastructure.Service;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
