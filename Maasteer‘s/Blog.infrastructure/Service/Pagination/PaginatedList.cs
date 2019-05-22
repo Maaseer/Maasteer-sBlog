@@ -25,7 +25,7 @@ namespace Blog.Core.Database.Pagination
         //类似的 Round 四舍五入 Floor 向下取整
         public int PageCount => (int)Math.Ceiling((decimal)(_totalItemsCount / PageSize));
         public bool HasPrevious => PageIndex > 0;
-        public bool HasNext => PageIndex < PageCount - 1;
+        public bool HasNext => PageIndex < PageCount;
         public PaginatedList(int pageSize, int pageIndex, int totalItemsCount, IEnumerable<T> Data)
         {
             PageSize = pageSize;

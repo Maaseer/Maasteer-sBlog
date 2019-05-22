@@ -82,6 +82,7 @@ namespace BlogApi.Controllers
                 ArticlesList.TotalItemsCount,
                 ArticlesList.PageCount
             };
+            //为资源创建前后页链接
             var links = CreateHateoasLinksForPages(articlePrameters, ArticlesList.HasNext, ArticlesList.HasPrevious);
             var reslut = new
             {
@@ -89,7 +90,7 @@ namespace BlogApi.Controllers
                 value =  ArticlesAfterShaping
             };
             //将page类转化为Json，并写入HTTP请求头中
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(page, new JsonSerializerSettings {
+            Response.Headers.Add("Pagination", JsonConvert.SerializeObject(page, new JsonSerializerSettings {
                 ContractResolver = new CamelCasePropertyNamesContractResolver() //将变量首字母改为小写
             }));
 
@@ -275,9 +276,9 @@ namespace BlogApi.Controllers
 
             //判断是否有前一页/后一页 并加入links
             if (hasNextPage)
-                links.Add(new LinkViewModel(CreateArticleUrl(articlePrameters,PaginationUrlType.NextPage),"NextPage", "Get"));
+                links.Add(new LinkViewModel(CreateArticleUrl(articlePrameters,PaginationUrlType.NextPage),"nextPage", "Get"));
             if(hasLastPage)
-                links.Add(new LinkViewModel(CreateArticleUrl(articlePrameters,PaginationUrlType.PreviousPage), "LastPage", "Get"));
+                links.Add(new LinkViewModel(CreateArticleUrl(articlePrameters,PaginationUrlType.PreviousPage), "lastPage", "Get"));
 
             return links;
         }

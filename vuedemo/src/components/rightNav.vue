@@ -1,6 +1,16 @@
 <template>
+        <nav class="navbar bg-dark">
+            <ul class="navbar-nav ">
+                <right-nav-item
+                    v-for="(item,index) in items"
+                    v-bind:key="index"
+                    v-bind:item="item"
+                    @itemClick="itemClick"
+                ></right-nav-item>   
+            </ul>           
+        </nav>
+        <!--
     <div>
-        
         <right-nav-item
             v-for="(item,index) in items"
             v-bind:key="index"
@@ -9,7 +19,7 @@
         ></right-nav-item>
 
         <img alt="Vue logo" src="../assets/logo.png">
-    </div>
+    </div>-->
 </template>
 
 <script>
@@ -35,7 +45,7 @@ export default {
   },
     created(){
     var vm = this;
-    this.$http.get('http://localhost:6000/api/index').then(function(response){
+    this.$http.get('http://localhost:6005/api/index?orderBy=date desc').then(function(response){
         vm.items = response.data.value;
     })
   },
@@ -44,5 +54,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+a{
+    color: #999;
+        
+}
+a:hover{
+    color: aliceblue;
+}
+nav{
+    border-radius: 0.1in
+}
+ul{
+    margin: auto
+}
 </style>

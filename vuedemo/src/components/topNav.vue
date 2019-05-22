@@ -1,12 +1,12 @@
 <template>
     <nav id="top-nav" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
-        <a class="navbar-brand" href="#">Maasteer's blog</a>
+        <router-link class="navbar-brand" to="/">Maasteer's blog</router-link>
         <ul class="navbar-nav ml-auto" >
             <li class="nav-item">
-            <a class="nav-link" href="#">首页</a>
+                <router-link class="nav-link" to="/">首页</router-link>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">留言</a>
+                <router-link class="nav-link" to="/message">留言</router-link>
             </li>
         </ul>
         <form class="form-inline flex-row-reverse">
