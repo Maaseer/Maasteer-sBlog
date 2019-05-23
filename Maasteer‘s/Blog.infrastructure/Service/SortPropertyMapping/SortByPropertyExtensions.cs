@@ -59,16 +59,18 @@ namespace Blog.Service.infrastructure.SortPropertyMapping
                 //逆转属性链表
                 mappedProperties.Reverse();
                 //遍历属性链表
-                foreach (var destinationProperty in mappedProperties)
+                for (int i = 0; i < mappedProperties.Count; i++)
                 {
-                    //正序/逆序
-                    if (destinationProperty.Order)
+                    //正序/逆序  
+                    //踩坑日记：原本使用foreach，然而foreach是只读的，报出异常 因此改用普通for
+                    if (mappedProperties[i].Order)
                     {
                         orderDesc = !orderDesc;
                     }
                     //将源数据进行排序
-                    source = source.OrderBy(destinationProperty.Name + (orderDesc ? " descending" : " ascending"));
-                }
+                    source = source.OrderBy(mappedProperties[i].Name + (orderDesc ? " descending" : " ascending"));
+                    
+                };
             }
             //返回源数据
             return source;

@@ -42,9 +42,9 @@ namespace Blog.Core.Repository
             var result = MyDbContext.Articles.AsQueryable();
             //执行过滤操作
 
-            if (articlePrameters.Title!=null)//标题
+            if (!string.IsNullOrEmpty(articlePrameters.Title))//标题
                 result = result.Where(x => x.Title.ToLowerInvariant() == articlePrameters.Title.ToLowerInvariant());
-            if (articlePrameters.Auther != null)//作者
+            if (!string.IsNullOrEmpty(articlePrameters.Auther))//作者
                 result = result.Where(x => x.Auther.ToLowerInvariant() == articlePrameters.Auther.ToLowerInvariant());
             if (articlePrameters.AfterTime != null)//在某个时间之后
                 result = result.Where(x => x.Date.CompareTo(articlePrameters.AfterTime) >= 0);
@@ -52,7 +52,7 @@ namespace Blog.Core.Repository
                 result = result.Where(x => x.Date.CompareTo(articlePrameters.BeforeTime) <= 0);
 
             //执行模糊查询操作
-            if (articlePrameters.Contain != null)//标题包含
+            if (!string.IsNullOrEmpty(articlePrameters.Contain))//标题包含
                 result = result.Where(x => x.Title.ToLowerInvariant().Contains(articlePrameters.Contain.ToLowerInvariant()));
             
             //根据排序选项排序

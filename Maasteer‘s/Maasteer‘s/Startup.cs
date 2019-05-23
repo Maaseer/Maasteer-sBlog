@@ -48,7 +48,10 @@ namespace BlogApi
                     //允许localhost中8080端口跨域访问所有api
                     builder.WithOrigins("http://localhost:8080")
                     .AllowAnyMethod()
-                    .AllowAnyHeader();
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    .WithExposedHeaders("Pagination")//设置允许跨域访问中标头返回的数据
+                    ;
                     
                 });
             });
